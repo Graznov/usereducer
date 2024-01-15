@@ -1,9 +1,9 @@
 import './Add.scss'
-function Add(){
+function Add(props){
 
     return(
         <div className="add">
-            <output className="val"></output>
+            <output className="val">{props.textWork}</output>
             <button className="ok">
                 <img src="https://cdn.icon-icons.com/icons2/404/PNG/128/check_40622.png" alt="V"/>
             </button>
