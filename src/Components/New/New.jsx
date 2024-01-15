@@ -1,24 +1,24 @@
 import './New.scss'
 
-
 let text = ''
-function New(){
+function New({onChange}){
 
 
     function inputVallue(event){
-        // text = event.target.value
-    }
-    const ClickPlus = () =>{
         text = event.target.value
-        console.log('PLUS')
+    }
 
-        console.log(text)
+    const ClickPlus = () =>{
+        if (text) {
+            onChange(text)
+            text = ''
+        }
     }
 
     return(
         <div className="new">
             <div className="text">
-                <input onChange={inputVallue} className="abc"></input>
+                <input onChange={inputVallue} className="abc"/>
             </div>
 
             <button onClick={ClickPlus} className="NewWork">

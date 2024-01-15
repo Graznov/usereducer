@@ -3,32 +3,61 @@ import Title from "./Components/title/Title.jsx";
 import WorkArea from "./Components/WorkArea/WorkArea.jsx";
 import New from "./Components/New/New.jsx";
 import Add from "./Components/Add/Add.jsx";
-import {useReducer} from "react";
+import {useEffect, useReducer, useState} from "react";
 
 
-let arrWork = [
-    {textVal: '1dfsdfsdf'},
+let arrWork = []
 
-]
 
 const reduser = (state, action) => {
     switch (action.type){
-        // case
+        case 'ADD_TEXT' : {
+            console.log('ADD_TEXT')
+            console.log('action.payload: ',action.payload)
+            console.log(state)
+            arrWork.push(action.payload)
+
+
+            return{
+                // ...state,
+                // arrWork : [...arrWork, action.payload]
+
+            }
+        }
     }
 }
 function Container() {
+    useEffect(()=>{
+        console.log('arrWork: ', arrWork)
+
+    },[arrWork])
+    const handleNameChange = (name) => {
+
+        dispatch({
+            type : 'ADD_TEXT',
+            payload : name
+        })
+
+    }
+
+    // console.log(text)
 
     const [state, dispatch] = useReducer(reduser, {
         arrWork,
+
         workValue : 0,
         endValue : 0
     })
 
-    const listItems = arrWork.map(i =>
-        <Add textWork={i.textVal}/>
+
+
+
+
+    const listItems = arrWork.map((e, i) =>
+        <Add key={i} textWork={e}/>
     )
 
-    console.log(listItems)
+    console.log('listItems: ', listItems)
 
 
     function addItem(){
@@ -42,7 +71,7 @@ function Container() {
 
         {listItems}
 
-        <New click={addItem}/>
+        <New onChange={handleNameChange} />
     </div>
   )
 }
