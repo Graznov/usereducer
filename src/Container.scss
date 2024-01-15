@@ -1,4 +1,21 @@
-.container{
+.container {
+  position: relative;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+                  0deg,
+                  rgba(34, 193, 195, 1) 0%,
+                  rgba(194, 187, 83, 1) 12%,
+                  rgba(250, 185, 44, 1) 100%
+  );
+  font-family: "Jura", sans-serif;
+
+  border: none;
+
   max-width: 400px;
-  bac
+  min-width: 360px;
+
+  min-height: 200px;
+  margin: auto;
+  padding: 25px 10px;
+  border-radius: 20px;
 }

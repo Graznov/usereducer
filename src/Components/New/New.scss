@@ -1,0 +1,39 @@
+
+.new {
+  margin-top: 30px;
+  text-align: center;
+  //position: absolute;
+  //bottom: 30px;
+  //left: 20px;
+  //width: 350px;
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении; некоторые
+  считают, что необходимо оставлять стрелочный вид для кнопок */
+  cursor: pointer;
+}
+.text {
+  margin-bottom: 5px;
+}
+.abc {
+  background-color: #2f86a6;
+  color: #f0e9d2;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 400px;
+  min-width: 360px;
+  font-family: "Merriweather", serif;
+  font-size: 15px;
+
+  text-align: center;
+}
+img {
+  margin-top: 10px;
+  width: 30px;
+}
+
