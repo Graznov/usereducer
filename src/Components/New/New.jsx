@@ -6,10 +6,10 @@ function New(){
 
 
     function inputVallue(event){
-        text = event.target.value
+        // text = event.target.value
     }
     const ClickPlus = () =>{
-
+        text = event.target.value
         console.log('PLUS')
 
         console.log(text)
