@@ -8,7 +8,7 @@ function New({onChange}){
     function inputVallue(event){
         setText(event.target.value)
     }
-    
+
     const ClickPlus = () =>{
         if (text) {
             onChange(text)

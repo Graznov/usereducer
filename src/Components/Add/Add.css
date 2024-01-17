@@ -16,6 +16,10 @@
   border-radius: 10px;
 }
 
+.valCompleted {
+  background-color: #56a91f;
+}
+
 .ok {
   margin-left: 5px;
   order: 2;

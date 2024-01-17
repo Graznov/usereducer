@@ -6,33 +6,24 @@ import Add from "./Components/Add/Add.jsx";
 import {useEffect, useReducer, useState} from "react";
 
 
-let arrWork = []
-
+// let arrWork = ['1']
 
 const reduser = (state, action) => {
+
     switch (action.type){
         case 'ADD_TEXT' : {
             console.log('ADD_TEXT')
-            console.log('action.payload: ',action.payload)
-            console.log(state)
-            // arrWork.push(action.payload)
-
-
             return{
-
-                ...state,
-                arrWork : [...arrWork, action.payload],
-
-
+                // ...state,
+                arrWork : [...state.arrWork, action.payload],
+                workValue : state.workValue++,
+                endValue : state.endValue
             }
         }
     }
 }
 function Container() {
-    useEffect(()=>{
-        console.log('arrWork: ', arrWork)
 
-    },[arrWork])
     const handleNameChange = (name) => {
 
         dispatch({
@@ -42,26 +33,21 @@ function Container() {
 
     }
 
-    //
+
 
     const [state, dispatch] = useReducer(reduser, {
 
-        arrWork,
+        arrWork : [],
         workValue : 0,
         endValue : 0
 
     })
-    console.log(state)
-    const listItems = arrWork.map((e, i) =>
-        <Add key={`${i}. ${e}`} textWork={e}/>
+
+    const listItems = state.arrWork.map((e, i) =>
+        <Add  key={`${i}. ${e}`} textWork={e}/>
     )
 
     console.log('listItems: ', listItems)
-
-
-    function addItem(){
-        console.log(13)
-    }
 
   return (
     <div className={'container'}>
