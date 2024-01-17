@@ -48,11 +48,7 @@ function Container() {
         workValue : 0,
         endValue : 0
     })
-
-
-
-
-
+    
     const listItems = arrWork.map((e, i) =>
         <Add key={i} textWork={e}/>
     )
