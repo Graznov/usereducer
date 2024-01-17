@@ -44,7 +44,7 @@ function Container() {
     })
 
     const listItems = state.arrWork.map((e, i) =>
-        <Add  key={`${i}. ${e}`} textWork={e}/>
+        <Add key={`${i}. ${e}`} textWork={e}/>
     )
 
     console.log('listItems: ', listItems)
