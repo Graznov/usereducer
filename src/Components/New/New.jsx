@@ -1,24 +1,25 @@
 import './New.scss'
+import {useState} from "react";
 
-let text = ''
+
 function New({onChange}){
 
-
+    let [text, setText] = useState('')
     function inputVallue(event){
-        text = event.target.value
+        setText(event.target.value)
     }
-
+    
     const ClickPlus = () =>{
         if (text) {
             onChange(text)
-            text = ''
+            setText('')
         }
     }
 
     return(
         <div className="new">
             <div className="text">
-                <input onChange={inputVallue} className="abc"/>
+                <input onChange={inputVallue} className="abc" value={text}/>
             </div>
 
             <button onClick={ClickPlus} className="NewWork">

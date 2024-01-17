@@ -15,12 +15,14 @@ const reduser = (state, action) => {
             console.log('ADD_TEXT')
             console.log('action.payload: ',action.payload)
             console.log(state)
-            arrWork.push(action.payload)
+            // arrWork.push(action.payload)
 
 
             return{
-                // ...state,
-                // arrWork : [...arrWork, action.payload]
+
+                ...state,
+                arrWork : [...arrWork, action.payload],
+
 
             }
         }
@@ -40,17 +42,18 @@ function Container() {
 
     }
 
-    // console.log(text)
+    //
 
     const [state, dispatch] = useReducer(reduser, {
-        arrWork,
 
+        arrWork,
         workValue : 0,
         endValue : 0
+
     })
-    
+    console.log(state)
     const listItems = arrWork.map((e, i) =>
-        <Add key={i} textWork={e}/>
+        <Add key={`${i}. ${e}`} textWork={e}/>
     )
 
     console.log('listItems: ', listItems)
@@ -63,7 +66,7 @@ function Container() {
   return (
     <div className={'container'}>
         <Title/>
-        <WorkArea/>
+        <WorkArea workValue={state.workValue} endValue={state.endValue}/>
 
         {listItems}
 

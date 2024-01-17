@@ -1,10 +1,10 @@
 import './WorkArea.scss'
 
-function WorkArea(){
+function WorkArea(props){
     return(
         <div className="work">
-            <p>Всего:<output className="workValue">0</output></p>
-            <p>Выполнено:<output className="endValue">0</output></p>
+            <p>Всего:<output className="workValue">{props.workValue}</output></p>
+            <p>Выполнено:<output className="endValue">{props.endValue}</output></p>
         </div>
     )
 }
