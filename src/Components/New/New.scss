@@ -2,10 +2,6 @@
 .new {
   margin-top: 30px;
   text-align: center;
-  //position: absolute;
-  //bottom: 30px;
-  //left: 20px;
-  //width: 350px;
 }
 button {
   padding: 0;
@@ -13,9 +9,11 @@ button {
   font: inherit;
   color: inherit;
   background-color: transparent;
-  /* отображаем курсор в виде руки при наведении; некоторые
-  считают, что необходимо оставлять стрелочный вид для кнопок */
   cursor: pointer;
+
+}
+.btnDeactive{
+  pointer-events: none;
 }
 .text {
   margin-bottom: 5px;
@@ -29,8 +27,14 @@ button {
   min-width: 360px;
   font-family: "Merriweather", serif;
   font-size: 15px;
-
   text-align: center;
+  transition-duration: 0.4s;
+
+}
+.abcRed{
+  background: red;
+  transition-duration: 0.4s;
+
 }
 img {
   margin-top: 10px;
