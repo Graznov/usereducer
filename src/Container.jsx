@@ -63,7 +63,7 @@ function Container() {
         <Add callback={callback} key={e} textWork={e}/>
     )
 
-    console.log('listItems: ', listItems)
+    // console.log('listItems: ', listItems)
 
   return (
     <div className={'container'}>
