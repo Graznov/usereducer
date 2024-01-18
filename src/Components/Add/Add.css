@@ -35,4 +35,8 @@ img:active {
   order: 3;
 }
 
+.delitDeactive {
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=Add.css.map */
