@@ -10,7 +10,7 @@ function Add(props){
         'valCompleted' : completed,
     })
     const ok = classNames('ok',{
-        'delitDeactive' : completed
+        // 'delitDeactive' : completed
     })
     const delite = classNames('delit', {
         'delitDeactive' : !completed
@@ -18,11 +18,18 @@ function Add(props){
 
     function clickGREEN(){
         (!completed) ? setCompleted(true) : setCompleted(false);
-        props.callback(['GREEN',0])
+        props.dispatch({
+            type : 'GREEN',
+            payload : completed
+        })
+        console.log('completed - ',completed)
     }
 
     function clickRED(){
-        props.callback(['RED', props.textWork])
+        props.dispatch({
+            type : 'RED',
+            payload : props.textWork
+        })
     }
 
     return(

@@ -3,7 +3,7 @@ import {useState} from "react";
 import classNames from "classnames";
 
 
-function New({onChange}){
+function New(props){
 
     const [inpBool, setInpBool] = useState(true)
     const inputClass = classNames('abc',{
@@ -23,7 +23,11 @@ function New({onChange}){
 
     const ClickPlus = () =>{
         if (text) {
-            onChange(text)
+            props.dispatch({
+                type : 'ADD_TEXT',
+                payload : text
+            })
+
             setText('')
         } else {
             setText("Add text")
