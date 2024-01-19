@@ -1,15 +1,13 @@
 .container {
   position: relative;
-  background: rgb(34, 193, 195);
-  background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(194, 187, 83) 12%, rgb(250, 185, 44) 100%);
   font-family: "Jura", sans-serif;
-  border: none;
+  background: #afb4b6;
+  border: 1px solid black;
   max-width: 400px;
   min-width: 360px;
   min-height: 200px;
   margin: auto;
-  padding: 25px 10px;
-  border-radius: 20px;
+  padding: 25px 20px;
 }
 
 /*# sourceMappingURL=Container.css.map */

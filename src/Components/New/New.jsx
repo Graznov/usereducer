@@ -17,6 +17,7 @@ function New({onChange}){
 
     let [text, setText] = useState('')
     function inputVallue(event){
+
         setText(event.target.value)
     }
 
@@ -45,7 +46,7 @@ function New({onChange}){
 
             <button onClick={ClickPlus} className={btnClass}>
 
-                <img src='https://cdn.icon-icons.com/icons2/404/PNG/128/plus_40632.png' alt="+"/>
+                <img src='https://cdn.icon-icons.com/icons2/488/PNG/512/plus_47697.png' alt="+"/>
 
             </button>
         </div>

@@ -2,6 +2,10 @@
 .new {
   margin-top: 30px;
   text-align: center;
+  img {
+    margin-top: 10px;
+    width: 35px;
+  }
 }
 button {
   padding: 0;
@@ -17,14 +21,15 @@ button {
 }
 .text {
   margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
 }
 .abc {
-  background-color: #2f86a6;
-  color: #f0e9d2;
+  display: inline-block;
+  background: #a6abad;
   padding: 10px;
-  border-radius: 20px;
-  max-width: 400px;
-  min-width: 360px;
+  border: none;
+  border-bottom: 2px solid black ;
   font-family: "Merriweather", serif;
   font-size: 15px;
   text-align: center;
@@ -36,8 +41,5 @@ button {
   transition-duration: 0.4s;
 
 }
-img {
-  margin-top: 10px;
-  width: 30px;
-}
+
 

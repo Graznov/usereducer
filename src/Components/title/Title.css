@@ -1,11 +1,8 @@
 .title {
-  font-weight: 100;
+  font-weight: 400;
   font-size: 27px;
-  text-align: center;
-  color: #2f86a6;
-  font-family: "Seymour One", sans-serif;
-  width: 350px;
-  margin: 0px auto;
+  color: #000000;
+  font-family: "Raleway", sans-serif;
 }
 
 /*# sourceMappingURL=Title.css.map */

@@ -29,10 +29,10 @@ function Add(props){
         <div className="add">
             <output className={valClass}>{props.textWork}</output>
             <button onClick={clickGREEN} className={ok}>
-                <img src="https://cdn.icon-icons.com/icons2/404/PNG/128/check_40622.png" alt="V"/>
+                <img src="https://cdn.icon-icons.com/icons2/488/PNG/512/confirm_47757.png" alt="V"/>
             </button>
             <button onClick={clickRED} className={delite}>
-                <img src="https://cdn.icon-icons.com/icons2/404/PNG/128/delete_40623.png" alt="del"/>
+                <img src="https://cdn.icon-icons.com/icons2/488/PNG/512/plus_47697.png" alt="del"/>
             </button>
         </div>
     )

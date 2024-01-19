@@ -11,18 +11,20 @@
   flex-grow: 1;
   text-align: left;
   padding: 10px;
-  background-color: #b05e27;
-  color: #f0e9d2;
-  border-radius: 10px;
+  border-bottom: 2px solid black;
 }
 
 .valCompleted {
-  background-color: #56a91f;
+  background-color: #1ca81c;
+  color: #020202;
 }
 
 .ok {
   margin-left: 5px;
   order: 2;
+}
+.ok img {
+  width: 29px;
 }
 
 img:active {
@@ -34,9 +36,14 @@ img:active {
   margin-left: 5px;
   order: 3;
 }
+.delit img {
+  rotate: 45deg;
+  width: 35px;
+}
 
 .delitDeactive {
   pointer-events: none;
+  opacity: 0.3;
 }
 
 /*# sourceMappingURL=Add.css.map */
