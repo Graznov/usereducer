@@ -25,6 +25,12 @@ button {
   display: flex;
   flex-direction: column;
 }
+.text input:focus,
+.text select:focus,
+.text textarea:focus,
+.text button:focus {
+  outline: none;
+}
 
 .abc {
   display: inline-block;
@@ -39,7 +45,7 @@ button {
 }
 
 .abcRed {
-  background: red;
+  background: rgba(250, 0, 0, 0.3);
   transition-duration: 0.4s;
 }
 

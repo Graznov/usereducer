@@ -1,7 +1,9 @@
 .add {
-  display: block;
   display: flex;
+  justify-content: space-between;
   margin: 7px 10px 7px 10px;
+  box-sizing: border-box;
+  transition-duration: 0.6s;
 }
 
 .val {
@@ -10,13 +12,20 @@
   order: 1;
   flex-grow: 1;
   text-align: left;
-  padding: 10px;
-  border-bottom: 2px solid black;
+  padding: 10px 0px 10px 12px;
+  max-width: 400px;
+  min-width: 260px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .valCompleted {
-  background-color: #1ca81c;
+  background-color: rgb(34, 240, 4);
   color: #020202;
+}
+
+.contBtn {
+  display: flex;
 }
 
 .ok {

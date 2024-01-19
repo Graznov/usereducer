@@ -6,23 +6,31 @@ import Add from "./Components/Add/Add.jsx";
 import {useReducer} from "react";
 import {reduser} from "./Reduser.js";
 
+
+
 function Container() {
 
     const [state, dispatch] = useReducer(reduser, {
         arrWork : [],
         workValue : 0,
-        endValue : 0
+        endValue : 0,
+        // data : ''
     })
 
-  return (
+    // const list = state.arrWork.map((e) =>
+    //         <Add dispatch={dispatch} key={new Date()} textWork={e}/>
+    //     )
+    // console.log(list)
+    return (
     <div className={'container'}>
         <Title/>
         <WorkArea workValue={state.workValue} endValue={state.endValue}/>
 
-        {
-            state.arrWork.map((e) =>
-            <Add dispatch={dispatch} key={e} textWork={e}/>)
-        }
+        {/*{list}*/}
+        {state.arrWork.map((e) =>
+            <Add dispatch={dispatch} key={e} textWork={e}/>
+        )}
+
 
         <New dispatch={dispatch} />
     </div>

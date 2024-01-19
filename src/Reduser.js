@@ -7,7 +7,8 @@ export const reduser = (state, action) => {
                 ...state,
                 arrWork : [...state.arrWork, action.payload],
                 workValue : state.workValue++,
-                endValue : state.endValue
+                endValue : state.endValue,
+                data : action.data
             }
         }
         case 'GREEN' : {

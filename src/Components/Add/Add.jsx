@@ -28,22 +28,29 @@ function Add(props){
     function clickRED(){
         props.dispatch({
             type : 'RED',
-            payload : props.textWork
+            payload : props.textWork,
         })
     }
 
     return(
         <div className="add">
-            <output className={valClass}>{props.textWork}</output>
-            <button onClick={clickGREEN} className={ok}>
-                <img src="https://cdn.icon-icons.com/icons2/488/PNG/512/confirm_47757.png" alt="V"/>
-            </button>
-            <button onClick={clickRED} className={delite}>
-                <img src="https://cdn.icon-icons.com/icons2/488/PNG/512/plus_47697.png" alt="del"/>
-            </button>
+
+            <div className={valClass}>{props.textWork}</div>
+
+            {/*<div className={'contBtn'}>*/}
+                <button onClick={clickGREEN} className={ok}>
+                    <img src="https://cdn.icon-icons.com/icons2/488/PNG/512/confirm_47757.png" alt="V"/>
+                </button>
+                <button onClick={clickRED} className={delite}>
+                    <img src="https://cdn.icon-icons.com/icons2/488/PNG/512/plus_47697.png" alt="del"/>
+                </button>
+            {/*</div>*/}
+
         </div>
     )
 }
+
+
 export default Add
 
 // работа с кнопками галка и
