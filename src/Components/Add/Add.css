@@ -19,6 +19,11 @@
   overflow-wrap: break-word;
 }
 
+.val_Data {
+  color: #075170;
+  font-size: 15px;
+}
+
 .valCompleted {
   background-color: rgb(34, 240, 4);
   color: #020202;

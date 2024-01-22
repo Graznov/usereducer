@@ -14,21 +14,16 @@ function Container() {
         arrWork : [],
         workValue : 0,
         endValue : 0,
-        // data : ''
     })
 
-    // const list = state.arrWork.map((e) =>
-    //         <Add dispatch={dispatch} key={new Date()} textWork={e}/>
-    //     )
-    // console.log(list)
     return (
     <div className={'container'}>
         <Title/>
         <WorkArea workValue={state.workValue} endValue={state.endValue}/>
 
         {/*{list}*/}
-        {state.arrWork.map((e) =>
-            <Add dispatch={dispatch} key={e} textWork={e}/>
+        {state.arrWork.map((e,i) =>
+            <Add dispatch={dispatch} key={e.key} textWork={e.text} data={e.key}/>
         )}
 
 

@@ -22,20 +22,23 @@ function Add(props){
             type : 'GREEN',
             payload : completed
         })
-        console.log('completed - ',completed)
     }
 
     function clickRED(){
         props.dispatch({
             type : 'RED',
             payload : props.textWork,
+            payData : props.data
         })
     }
 
     return(
         <div className="add">
 
-            <div className={valClass}>{props.textWork}</div>
+            <div className={valClass}>
+                <div className={'val_Data'}>{props.data} добавлена запись:</div>
+                {props.textWork}
+            </div>
 
             {/*<div className={'contBtn'}>*/}
                 <button onClick={clickGREEN} className={ok}>

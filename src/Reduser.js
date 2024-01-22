@@ -2,17 +2,15 @@ export const reduser = (state, action) => {
 
     switch (action.type){
         case 'ADD_TEXT' : {
-
+            // console.log(action)
             return{
                 ...state,
-                arrWork : [...state.arrWork, action.payload],
+                arrWork : [...state.arrWork, {text:action.payload, key:action.keyData}],
                 workValue : state.workValue++,
                 endValue : state.endValue,
-                data : action.data
             }
         }
         case 'GREEN' : {
-            console.log('GREEN, action.payload: ', action.payload)
             if(action.payload){
                 return {
                     ...state,
@@ -30,11 +28,12 @@ export const reduser = (state, action) => {
 
             return {
                 ...state,
-                arrWork : state.arrWork.filter(e => e !== action.payload),
+                arrWork : state.arrWork.filter(e => e.key !== action.payData),
                 workValue : state.workValue--,
                 endValue : state.endValue--
             }
         }
         default : return state
     }
+
 }

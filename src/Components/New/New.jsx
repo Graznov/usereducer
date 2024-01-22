@@ -13,6 +13,12 @@ function getKey() {
         second: '2-digit'
     });
 }
+function getKeyDate() {
+    const now = new Date();
+    return now.toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+}
+
+// console.log(getKeyDate())
 function New(props){
 
 
@@ -33,14 +39,11 @@ function New(props){
     }
 
     const ClickPlus = () =>{
-        const createKeyData = getKey()
-        console.log(createKeyData)
         if (text) {
             props.dispatch({
                 type : 'ADD_TEXT',
                 payload : text,
-
-                // data : createKeyData
+                keyData : getKeyDate()
             })
 
             setText('')
