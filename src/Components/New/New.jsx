@@ -1,18 +1,7 @@
 import './New.scss'
-import {useState} from "react";
+import {useRef, useState} from "react";
 import classNames from "classnames";
 
-function getKey() {
-    const now = new Date();
-    return  now.toLocaleString('en-GB', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-    });
-}
 function getKeyDate() {
     const now = new Date();
     return now.toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -20,6 +9,16 @@ function getKeyDate() {
 
 // console.log(getKeyDate())
 function New(props){
+
+    const textRef = useRef()
+
+    const focusError = (i) => {
+        switch (true){
+            case !text:
+                textRef.current.focus()
+                break
+        }
+    }
 
 
     const [inpBool, setInpBool] = useState(true)
@@ -48,6 +47,8 @@ function New(props){
 
             setText('')
         } else {
+
+
             setText("Add text")
             setInpBool(false)
             setBtnBool(false)
@@ -55,6 +56,7 @@ function New(props){
                 setText("")
                 setInpBool(true)
                 setBtnBool(true)
+                focusError(text)
             },1000)
 
         }
@@ -63,7 +65,7 @@ function New(props){
     return(
         <div className="new">
             <div className="text">
-                <input onChange={inputVallue} className={inputClass} value={text}/>
+                <input ref={textRef} onChange={inputVallue} className={inputClass} value={text}/>
             </div>
 
             <button onClick={ClickPlus} className={btnClass}>
